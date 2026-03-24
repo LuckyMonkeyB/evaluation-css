@@ -25,7 +25,7 @@ img, picture, video, canvas, svg{
 }
 
 .wrapper{
-     width: min(95%, 1300px);
+     width: 100%;
      margin-inline: auto;
 }
 
@@ -41,7 +41,6 @@ img, picture, video, canvas, svg{
      align-items: center;
      gap: 6.25rem;
 }
-
 
 .burger-menu{
      display: block;
@@ -65,10 +64,58 @@ img, picture, video, canvas, svg{
 }
 
 .main-nav__list{
-          display: none;
-     }
+     display: none;
+}
+
+/* MAIN */
+
+.shop-grid{
+     display: grid;
+     grid-template-columns: repeat(12, 1fr);
+}
+
+.card{
+     position: relative;
+}
+
+.card--small{
+     grid-column: 6 span;
+}
+.card--medium{
+     grid-column: 12 span;
+}
+.card__img{
+     aspect-ratio: 3/4;
+}
+.card__img img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+}
+
+.title-article{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+
+     color: #fff;
+     text-transform: uppercase;
+     font-size: 1.5rem;
+}
+
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 770px){
+     .card--small{
+          grid-column: 3 span;
+     }
+     .card--medium{
+          grid-column: 4 span;
+     }
+     
+}
 
 @media screen and (min-width: 1024px) {
      .main-nav{
