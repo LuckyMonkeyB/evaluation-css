@@ -6,11 +6,11 @@
 body{
      margin: 0;
      padding: 0;
-
+     
      display: grid;
      grid-template-rows: auto 1fr auto; /*main pushes footer to the bottom*/
      min-height: 100vh;
-
+     
      font-family: "Oswald", sans-serif;
 }
 
@@ -21,12 +21,11 @@ img, picture, video, canvas, svg{
 
 :root{
      /* Colors Palette */
-
+     
 }
 
 .wrapper{
-     width: min(90%, 1300px);
-     margin-inline: auto;
+     width: 100%;
 }
 .abscenter{
      position: absolute;
@@ -36,15 +35,35 @@ img, picture, video, canvas, svg{
      text-align: center;
 }
 
+
+.title{
+     font-family: "Oswald", sans-serif;
+}
+
+h2{
+     font-size: 1.25rem;
+     text-transform: uppercase;
+     font-family: "Oswald", sans-serif;
+     font-weight: 400;
+
+}
+
+h3{
+     font-size: 1rem;
+}
+
+p{
+     font-size: 0.8rem;
+}
+
 /* NAVBAR */
 
 .main-header{
-     background-color: beige;
+     background: url('../assets/img/bg_pattern.png');
      padding: 1rem;
 }
 .main-nav{
      display: flex;
-     justify-content: flex-start;
      align-items: center;
      gap: 6.25rem;
 }
@@ -64,10 +83,11 @@ img, picture, video, canvas, svg{
      margin: 5px 0;
 }
 
-.logo img{
+#logo-sezane{
      height: 35px;
      width: auto;
      max-width: 120px;
+     margin: 0 auto;
 }
 
 .main-nav__list{
@@ -105,12 +125,13 @@ img, picture, video, canvas, svg{
      color: #fff;
      text-transform: uppercase;
      font-size: 1.5rem;
+     
 }
 
 .lookbook{
      min-height: 100vh;
      position: relative;
-     background: url('/assets/img/background_dresses.webp') center/cover;
+     background: url('../assets/img/background_dresses.webp') center/cover;
 }
 
 .lookbook::before{
@@ -153,6 +174,60 @@ img, picture, video, canvas, svg{
      }
 }
 
+
+/* FOOTER */
+footer{
+     background: url('../assets/img/bg_pattern.png');
+     font-family: "Libre Baskerville", serif;
+     padding: 2rem;
+}
+.footer-content{
+     display: grid;
+     grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+}
+
+.newsletter-box{
+     display: flex;
+     border: 1px solid #cecece;
+     max-width: 250px;
+}
+
+input[type="email"]{
+     padding: 1rem;
+     background-color: transparent;
+     border: transparent;
+     flex: 1;
+}
+
+.btn-email{
+     background-color: #000;
+     color: #fff;
+     text-transform: uppercase;
+     padding: 0.75rem;
+}
+
+.socials{
+     display: flex;
+     gap: 0.75rem;
+     padding: 1rem 0;
+}
+.socials svg{
+     width: 1rem;
+     height: 1rem;
+}
+
+.socials svg:nth-of-type(1):hover{
+     cursor: pointer;
+     fill: red;
+     stroke: red;
+}
+.socials svg:nth-of-type(2):hover{
+     cursor: pointer;
+     fill: red;
+     stroke: red;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 770px){
      .card--small{
@@ -162,9 +237,20 @@ img, picture, video, canvas, svg{
           grid-column: 4 span;
      }
      
+     
 }
 
 @media screen and (min-width: 1024px) {
+     .main-header{
+          /* position: absolute;
+          display: flex;
+          left: 50%;
+          transform: translateX(-50%);
+          max-width: 1300px; */
+          background: transparent;
+          /* z-index: 2; */
+     }
+     
      .main-nav{
           display: flex;
           justify-content: center;
@@ -172,20 +258,23 @@ img, picture, video, canvas, svg{
           gap: 6.25rem;
      }
      
-     .logo img{
+     #logo-sezane{
           height: 45px;
           max-width: 180px;
+          /* fill: #fff; */
+          color: #000;
+          
      }
-
+     
      .burger-menu{
           display: none;
      }
-
-
+     
+     
      .main-nav__list{
           display: block;
      }
-
+     
      .main-nav__list {
           list-style: none;
           display: flex;
@@ -195,6 +284,7 @@ img, picture, video, canvas, svg{
      .main-nav__link {
           text-decoration: none;
           text-transform: uppercase;
+          /* color: #fff; */
           color: #000;
           font-weight: 700;
           transition: all .3s ease;
@@ -203,8 +293,14 @@ img, picture, video, canvas, svg{
      .main-nav__link:hover {
           color: #4ab98f;
           transform: translateY(-2px);
-     
+          
      }
      
+     
+
+     .wrapper{
+          margin: 0 auto;
+          max-width: 1300px;
+     }
 }
 
