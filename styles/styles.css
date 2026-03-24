@@ -28,6 +28,13 @@ img, picture, video, canvas, svg{
      width: 100%;
      margin-inline: auto;
 }
+.abscenter{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+}
 
 /* NAVBAR */
 
@@ -69,7 +76,7 @@ img, picture, video, canvas, svg{
 
 /* MAIN */
 
-.shop-grid{
+.bento-grid{
      display: grid;
      grid-template-columns: repeat(12, 1fr);
 }
@@ -95,16 +102,56 @@ img, picture, video, canvas, svg{
 }
 
 .title-article{
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-
      color: #fff;
      text-transform: uppercase;
      font-size: 1.5rem;
 }
 
+.lookbook{
+     min-height: 100vh;
+     position: relative;
+     background: url('/assets/img/background_dresses.webp') center/cover;
+}
+
+.lookbook::before{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.lookbook-content{
+     width: 100%;
+}
+
+.lookbook-content__title{
+     color: #fff;
+     text-transform: uppercase;
+     font-size: 2.5rem;
+     font-weight: 400;
+     margin: 0;
+}
+
+.btn-lookbook{
+     display: inline-block;
+     color: #fff;
+     font-size: 20px;
+     text-decoration: none;
+     text-transform: uppercase;
+     border: 2px solid #fff;
+     padding: 10px 20px;
+     transition: .3s all ease-in-out;
+     
+     &:hover{
+          /* padding: 10px 40px; */
+          background-color: #fff;
+          color: #000;
+          
+     }
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 770px){
