@@ -19,11 +19,7 @@ img, picture, video, canvas, svg{
      max-width: 100%;
 }
 
-:root{
-     /* Colors Palette */
-     
-}
-
+/* Global */
 .wrapper{
      width: 100%;
 }
@@ -33,11 +29,6 @@ img, picture, video, canvas, svg{
      left: 50%;
      transform: translate(-50%, -50%);
      text-align: center;
-}
-
-
-.title{
-     font-family: "Oswald", sans-serif;
 }
 
 h2{
@@ -56,7 +47,10 @@ p{
      font-size: 0.8rem;
 }
 
-/* NAVBAR */
+/* ---Mobile first--- */
+/* ===HEADER=== */
+
+/* Navbar */
 
 .main-header{
      background: url('../assets/img/bg_pattern.png');
@@ -94,8 +88,11 @@ p{
      display: none;
 }
 
-/* MAIN */
+/* ===MAIN=== */
 
+/* ~~Homepage~~ */
+
+/* Bento section */
 .bento-grid{
      display: grid;
      grid-template-columns: repeat(12, 1fr);
@@ -111,6 +108,7 @@ p{
 .card--medium{
      grid-column: 12 span;
 }
+
 .card__img{
      aspect-ratio: 3/4;
 }
@@ -128,6 +126,7 @@ p{
      
 }
 
+/* Lookbook section */
 .lookbook{
      min-height: 100vh;
      position: relative;
@@ -174,8 +173,37 @@ p{
      }
 }
 
+/* ~~~Top 30 page~~~ */
+.french-heroes{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.bags-grid{
+     display: grid;
+     grid-template-columns: repeat(12, 1fr);
+     
+}
 
-/* FOOTER */
+.card-bag{
+     grid-column: span 6;
+     display: flex;
+     flex-direction: column;
+}
+
+.card-bag__content{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0.25rem;
+     margin-top: auto;
+}
+
+.product-name{
+     text-transform: uppercase;
+}
+
+/* ===FOOTER=== */
 footer{
      background: url('../assets/img/bg_pattern.png');
      font-family: "Libre Baskerville", serif;
@@ -236,7 +264,6 @@ input[type="email"]{
      .card--medium{
           grid-column: 4 span;
      }
-     
      
 }
 
